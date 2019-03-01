@@ -1,0 +1,46 @@
+{
+  "name": "myapp",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "lukang <lukang@qq.com>",
+  "license": "MIT",
+  "scripts": {
+    "test": "echo 'hello my app'",
+    "build": "webpack",
+    "dev": "webpack-dev-server --info=true --progress --color",
+    "babel7": "babel ./test/test.js --out-file ./test/compileForBabel.js",
+    "testLess": "lessc ./src/assets/style/less/main.less ./src/assets/style/less/main.css"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.2.2",
+    "@babel/plugin-transform-arrow-functions": "^7.2.0",
+    "@babel/preset-env": "^7.2.3",
+    "axios-mock-adapter": "^1.16.0",
+    "clean-webpack-plugin": "^1.0.0",
+    "css-loader": "^2.1.0",
+    "eslint": "^5.12.0",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "file-loader": "^3.0.1",
+    "html-webpack-plugin": "^3.2.0",
+    "less": "^3.9.0",
+    "less-loader": "^4.1.0",
+    "style-loader": "^0.23.1",
+    "stylus": "^0.54.5",
+    "stylus-loader": "^3.0.2",
+    "vue-loader": "^15.5.0",
+    "vue-template-compiler": "^2.5.21",
+    "webpack": "^4.28.3",
+    "webpack-cli": "^3.2.0",
+    "webpack-dev-server": "^3.1.14"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.2.5",
+    "axios": "^0.18.0",
+    "element-ui": "^2.4.11",
+    "mockjs": "^1.0.1-beta3",
+    "vue": "^2.5.21",
+    "vue-router": "^3.0.2",
+    "vuex": "^3.0.1"
+  }
+}
