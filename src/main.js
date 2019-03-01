@@ -18,7 +18,7 @@ const router=new VueRouter({
   mode: 'hash',
   routes: routes
 })
-//router.push('/login');
+router.push('/login');
 new Vue({
     el:"#app",
     store,
