@@ -1,13 +1,19 @@
 import Login from './components/Login.vue';
 import NotFound from './components/404.vue';
 
+//登陆进去之后的主页面
 import Home from './components/Home.vue';
 
-import User from './components/User.vue';
+//用户中心
+import UserCenter from './components/userCenter.vue';
 
-import Table from './components/Table.vue';
-import Form from './components/Form.vue';
-import QueryUser from "./components/QueryUser.vue";
+//基础操作
+import Table from './components/basic/Table.vue';
+import Form from './components/basic/Form.vue';
+import QueryUser from "./components/basic/QueryUser.vue";
+
+//测试中心
+import Test from "./components/testCenter/Test.vue";
 
 import Echarts from "./components/charts/Echarts.vue";
 const routes=[
@@ -27,7 +33,7 @@ const routes=[
     name: 'home',
     children: [{
       path: 'user',
-      component: User
+      component: UserCenter
     },{
       path: 'table',
       component: Table
@@ -37,6 +43,9 @@ const routes=[
     },{
       path: 'query',
       component: QueryUser
+    },{
+      path: 'test',
+      component: Test
     },{
       path: 'echarts',
       component: Echarts

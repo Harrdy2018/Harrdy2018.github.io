@@ -48,7 +48,7 @@
               <el-submenu index="2">
                   <template slot="title">
                     <i class="el-icon-menu"></i>
-                    <span>基本训练</span>
+                    <span>基础操作</span>
                   </template>
                   <el-menu-item-group>
                     <template slot="title">分组一</template>
@@ -58,15 +58,13 @@
                   </el-menu-item-group>
                 </el-submenu>
   
-                <el-submenu index="4" :disabled="true">
+                <el-submenu index="4" :disabled="false">
                     <template slot="title">
                       <i class="el-icon-document"></i>
-                      <span>导航三</span>
+                      <span>测试中心</span>
                     </template>
                     <el-menu-item-group>
-                      <template slot="title">分组一</template>
-                      <el-menu-item index="3-1">选项一</el-menu-item>
-                      <el-menu-item index="3-2">选项二</el-menu-item>
+                      <el-menu-item index="/home/test">测试</el-menu-item>
                     </el-menu-item-group>
                   </el-submenu>   
   
