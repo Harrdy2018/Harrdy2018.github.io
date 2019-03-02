@@ -1,13 +1,13 @@
 import * as api from './../../api/api.js';
 const state={
-  isLogin: false,
-  administrator: {},
+  isLogin: eval(window.sessionStorage.getItem('isLogin')) || false,
+  administrator: JSON.parse(window.sessionStorage.getItem('admin')) || {}
   //loginTime=[]
 }
 
 //getters
 const getters={
- 
+  getLoginStatus: state=>state.isLogin,
 }
 //mutations
 const mutations={
@@ -26,11 +26,6 @@ const mutations={
     
     console.log(state)
   },
-  //浏览器重新刷新 state.isLogin回复为默认值 如果在登录状态 则改变状态即可
-  refresh(state){
-    state.isLogin=true;
-    state.administrator=JSON.parse(window.sessionStorage.getItem('admin'))
-  }
 }
 //actions
 const actions={

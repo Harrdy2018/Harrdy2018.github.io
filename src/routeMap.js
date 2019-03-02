@@ -31,9 +31,10 @@ const routes=[
     component: Home,
     redirect: '/home/user',
     name: 'home',
+    meta:{requiresAuth: true},
     children: [{
       path: 'user',
-      component: UserCenter
+      component: UserCenter,  
     },{
       path: 'table',
       component: Table

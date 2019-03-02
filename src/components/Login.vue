@@ -71,6 +71,11 @@
               }else{
                 console.log('现在登陆的是管理员');
                 //console.log(new Date().toLocaleString())
+                this.$message({
+                  showClose: false,
+                  message: '成功哦，欢迎进入本系统！！！',
+                  type: 'success'
+                })
                 this.updateAdministrator(user);
                 this.$router.push('/home/user');
               }

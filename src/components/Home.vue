@@ -5,7 +5,9 @@
       <div class="header">
         <h1>{{sysName}}</h1>
         <div class="userinfo">
-            <el-dropdown trigger="hover">
+            <el-dropdown 
+             @command="handleCommand"
+             trigger="hover">
               <span class="el-dropdown-link" style="color:#fff;margin-left: 16px;">
                 <img :src="this.administrator.avatar"/>
                 {{this.administrator.account}}
@@ -14,7 +16,7 @@
               <el-dropdown-menu slot="dropdown">
                 <el-dropdown-item>我的消息</el-dropdown-item>
                 <el-dropdown-item>设置</el-dropdown-item>
-                <el-dropdown-item>退出登录</el-dropdown-item>
+                <el-dropdown-item command="exit">退出登录</el-dropdown-item>
               </el-dropdown-menu>
             </el-dropdown>  
           </div>
@@ -111,8 +113,16 @@
       
       },
       methods: {
-        ...mapMutations('users',['refresh']),
-       
+        handleCommand(command){
+          console.log(command)
+          switch(command){
+            case 'exit':
+              window.sessionStorage.removeItem('admin');
+              window.sessionStorage.removeItem('isLogin');
+              this.$router.push({path:'/login'});
+              break;
+          }
+        },
         handleClose(key,keyPath){
           console.log(key,keyPath)
         },
@@ -122,16 +132,6 @@
       },
       mounted(){
         console.log("执行 home.vue 的mounted函数")
-        if(window.sessionStorage.getItem('isLogin')){
-          this.refresh();
-        }else{
-          this.$message({
-            showClose: false,
-            message: '警告哦，您还没有登录本系统，请登录！！',
-            type: 'warning'
-          })
-          this.$router.push({path:'/login'})
-        }
       },
       created(){
         console.log("执行 home.vue 的created函数")
