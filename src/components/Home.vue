@@ -44,44 +44,43 @@
                     <span>用户中心</span>
                   </template>
               </el-menu-item>
-                
-          
-  
-              <el-submenu index="2">
+ 
+              <el-submenu index="2" :disabled="false">
                   <template slot="title">
                     <i class="el-icon-menu"></i>
-                    <span>基础操作</span>
+                    <span>南京甲骨文实习</span>
                   </template>
                   <el-menu-item-group>
-                    <template slot="title">分组一</template>
+                    <template slot="title">实习知识</template>
+                    <el-menu-item index="/home/test">待补充</el-menu-item>
+                  </el-menu-item-group>
+                </el-submenu>              
+
+              <el-submenu index="3">
+                  <template slot="title">
+                    <i class="el-icon-menu"></i>
+                    <span>南京运满满实习</span>
+                  </template>
+                  <el-menu-item-group>
+                    <template slot="title">实习知识</template>
                     <el-menu-item index="/home/table">表格练习</el-menu-item>
                     <el-menu-item index="/home/form">表单练习</el-menu-item>
                     <el-menu-item index="/home/query">查询用户</el-menu-item>
+                    <el-menu-item index="/home/echarts">echarts</el-menu-item>
                   </el-menu-item-group>
                 </el-submenu>
   
-                <el-submenu index="4" :disabled="false">
-                    <template slot="title">
-                      <i class="el-icon-document"></i>
-                      <span>测试中心</span>
-                    </template>
-                    <el-menu-item-group>
-                      <el-menu-item index="/home/test">测试</el-menu-item>
-                    </el-menu-item-group>
-                  </el-submenu>   
   
-                <el-submenu index="4" :disabled="false">
-                    <template slot="title">
-                      <i class="el-icon-menu"></i>
-                      <span>Charts</span>
-                    </template>
-                    <el-menu-item-group>
-                      <template slot="title">分组一</template>
-                      <el-menu-item index="/home/echarts">echarts</el-menu-item>
-                    </el-menu-item-group>
-                  </el-submenu>  
                   
-                  
+                  <el-submenu index="4" :disabled="false">
+                      <template slot="title">
+                        <i class="el-icon-document"></i>
+                        <span>测试中心</span>
+                      </template>
+                      <el-menu-item-group>
+                        <el-menu-item index="/home/test">测试</el-menu-item>
+                      </el-menu-item-group>
+                    </el-submenu>                    
             
             </el-menu>
           </el-col>

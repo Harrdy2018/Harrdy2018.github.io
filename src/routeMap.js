@@ -7,15 +7,17 @@ import Home from './components/Home.vue';
 //用户中心
 import UserCenter from './components/userCenter.vue';
 
-//基础操作
-import Table from './components/basic/Table.vue';
-import Form from './components/basic/Form.vue';
-import QueryUser from "./components/basic/QueryUser.vue";
+//南京运满满实习
+import Table from './components/ymm/Table.vue';
+import Form from './components/ymm/Form.vue';
+import QueryUser from "./components/ymm/QueryUser.vue";
+import Echarts from "./components/ymm/Echarts.vue";
+
+//南京甲骨文实习
 
 //测试中心
 import Test from "./components/testCenter/Test.vue";
 
-import Echarts from "./components/charts/Echarts.vue";
 const routes=[
   //单独的登陆界面
   {

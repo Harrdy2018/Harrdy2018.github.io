@@ -31,10 +31,7 @@
       }
     },
     watch: {
-      isLogin: function(val){
-        console.log(val)
-        val=window.sessionStorage.getItem('isLogin')
-      }
+      
     }
   }
 </script>

@@ -7,7 +7,10 @@ import './assets/style/stylus/common.styl';
 import routes from './routeMap.js';
 import App from "./App.vue";
 import store from './store';
-
+//引入自己封装的echarts
+import myCharts from './comm/myCharts.js';
+Vue.use(myCharts);
+//console.log(Vue.prototype)
 //模拟拦截请求
 import './mock/response.js';
 
@@ -41,7 +44,7 @@ router.beforeEach((to,from,next)=>{
     next()
   }
 })
-router.push('/login');
+//router.push('/login');
 new Vue({
     el:"#app",
     store,
