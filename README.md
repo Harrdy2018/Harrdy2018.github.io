@@ -26,7 +26,6 @@ yarn run build
     * mock
     * store
     * App.vue
-    * Test.vue
     * main.js
     * routeMap.js
 * LICENSE
