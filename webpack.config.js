@@ -4,6 +4,7 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 const VueLoaderPlugin = require('vue-loader/lib/plugin.js');
 const webpack = require('webpack');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
+const env=process.env.NODE_ENV;
 const config={
     entry: {
         app: "./src/main.js",
@@ -56,6 +57,6 @@ const config={
     resolve: {
         alias: {'vue$': 'vue/dist/vue.esm.js'}
     },
-    mode: "development"
+    mode: env==='dev' ? "development" : "production"
 };
 module.exports=config;
