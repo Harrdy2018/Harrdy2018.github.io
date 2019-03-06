@@ -52,7 +52,7 @@
                   </template>
                   <el-menu-item-group>
                     <template slot="title">实习知识</template>
-                    <el-menu-item index="/home/test">待补充</el-menu-item>
+                    <el-menu-item index="/home/information">登记信息</el-menu-item>
                   </el-menu-item-group>
                 </el-submenu>              
 

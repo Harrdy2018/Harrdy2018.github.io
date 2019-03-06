@@ -56,3 +56,30 @@ Mock.mock('http://127.0.0.1:9000/user/remove','post',function(options){
   _users=_users.filter(e=>e.id !== id)
   return [200,{code: 200,msg:'删除成功'}];
 });
+
+var grades=[]
+Mock.mock('http://127.0.0.1:9000/grades/save','post',function(options){
+  console.log('mock正在对请求保存学生成绩  处理');
+  console.log(options);
+  var grade=JSON.parse(options.body);
+  console.log(grade)
+  grades.push(grade)
+  return {
+    resp: {
+      code: 'rbk-11001',
+      message: 'success'
+    },
+    grade: grade
+  }
+});
+
+Mock.mock('http://127.0.0.1:9000/grades/query','get',function(options){
+  console.log('mock正在对请求查询学生成绩  处理');
+  return {
+    resp: {
+      code: 'rbk-11001',
+      message: 'success'
+    },
+    grades: grades
+  }
+});

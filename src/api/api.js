@@ -63,8 +63,56 @@ function removeUser(params) {
   });
   return myPromise; 
 }
+
+//保存各科成绩ajax请求
+function saveGrades(params){
+  let myPromise=new Promise((resolve,reject)=>{
+    var xhr=new XMLHttpRequest();
+    xhr.open('POST','http://127.0.0.1:9000/grades/save',true);
+    xhr.send(JSON.stringify(params));
+
+  
+      xhr.onload=function () {
+        console.log('我收到了过来的响应');
+        console.log(xhr.response);
+        resolve(xhr.response);
+      }
+  
+      xhr.onerror=function(){
+        reject('There was an error!');
+      }
+   
+  });
+  return myPromise;
+  //myPromise.then(res=>console.log(res),err=>console.log(err));
+}
+
+//查询所欲成绩ajax请求
+function queryGrades(){
+  let myPromise=new Promise((resolve,reject)=>{
+    var xhr=new XMLHttpRequest();
+    xhr.open('get','http://127.0.0.1:9000/grades/query',true);
+    xhr.send();
+
+  
+      xhr.onload=function () {
+        console.log('我收到了过来的响应');
+        resolve(xhr.response);
+      }
+  
+      xhr.onerror=function(){
+        reject('There was an error!');
+      }
+   
+  });
+  return myPromise;
+  //myPromise.then(res=>console.log(res),err=>console.log(err));
+}
+
 export{
   requestLogin,
   getUserList,
-  removeUser
+  removeUser,
+  saveGrades,
+  queryGrades
 };
