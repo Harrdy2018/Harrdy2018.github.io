@@ -80,8 +80,17 @@
                       <el-menu-item-group>
                         <el-menu-item index="/home/test">测试</el-menu-item>
                       </el-menu-item-group>
-                    </el-submenu>                    
-            
+                    </el-submenu>    
+
+                    <el-submenu index="5" :disabled="false">
+                      <template slot="title">
+                        <i class="el-icon-document"></i>
+                        <span>工作相关</span>
+                      </template>
+                      <el-menu-item-group>
+                        <el-menu-item index="/home/write">笔试部分</el-menu-item>
+                      </el-menu-item-group>
+                    </el-submenu>   
             </el-menu>
           </el-col>
 

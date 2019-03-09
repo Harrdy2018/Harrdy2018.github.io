@@ -13,14 +13,15 @@ import Form from './components/ymm/Form.vue';
 import QueryUser from "./components/ymm/QueryUser.vue";
 import Echarts from "./components/ymm/Echarts.vue";
 
+//南京甲骨文实习
 import InformationEdit from "./components/oracle/information/InformationEdit.vue";
 import InformationList from "./components/oracle/information/InformationList.vue";
-
-//南京甲骨文实习
 
 //测试中心
 import Test from "./components/testCenter/Test.vue";
 
+//工作
+import Write from './components/job/Write.vue';
 const routes=[
   //单独的登陆界面
   {
@@ -55,6 +56,9 @@ const routes=[
     },{
       path: 'echarts',
       component: Echarts
+    },{
+      path: 'write',
+      component: Write
     }]
   },{
     path: '/home/information',
