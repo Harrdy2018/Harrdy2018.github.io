@@ -1,0 +1,4 @@
+getData({
+name: 'lukang',
+age: 18
+})
