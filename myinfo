@@ -1,4 +1,4 @@
 getData({
-name: 'lukang',
+'name': 'lukang',
 age: 18
 })
