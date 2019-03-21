@@ -1,5 +1,0 @@
-getData({
-name: 'lukang',
-age: 18,
-sex: 0
-})
