@@ -1,7 +1,7 @@
-# VueAdmin
-### 将实习过程中遇到的问题，学到的知识写到这个网站中
-**demo**: [https://Harrdy2018.github.io/dist/index.html#/login](https://Harrdy2018.github.io/dist/index.html#/login)
-
+# 前端作品
+[vueAdmin](https://Harrdy2018.github.io/demo/vueAdmin/dist/index.html#/login)
+[2018百度招聘网站](https://Harrdy2018.github.io/demo/baidu/dist/index.html#/login)
+[2018百度招聘原网站](https://talent.baidu.com/external/baidu/index.html)
 # To start
 
 ``` bash
