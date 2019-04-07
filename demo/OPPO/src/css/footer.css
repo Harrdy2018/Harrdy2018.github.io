@@ -1,0 +1,111 @@
+/*页面底部的样式*/
+#oc-footer{
+	width: 100%;
+	height: 365px;
+	background-color: #fff;
+	padding: 60px 0px;
+}
+#oc-footer .of-nav{
+	width: 1200px;
+	height: 240px;
+  margin: 0px auto;
+  border-top: 1px solid #bdbdbd;
+  padding-top: 30px;
+}
+#oc-footer .of-serv-oppo>a{
+  display: inline-block;
+  background-color: gray;
+  color: #fff;
+  width: 173px;
+  height: 53px;
+  border-radius: 28px;
+}
+#oc-footer .of-serv-oppo>a:hover{
+  background-color: rgb(14, 12, 12);
+}
+#oc-footer .of-serv-oppo>a>p{
+  text-align: center;
+  margin-top: 10px;
+}
+#oc-footer .of-nav .oppo-server{
+  width: 32px;
+	height: 32px;
+	background: url("../img/server.png") no-repeat;
+	display: inline-block;
+	vertical-align: middle;
+}
+#oc-footer .of-nav .of-serv-tel p:first-child{
+  font-size: 20px;
+  line-height: 1;
+  font-weight: normal;
+  color: #333;
+  margin: 10px 0 10px 0;
+  text-align: center;
+}
+#oc-footer .of-nav .of-serv-tel p:last-child{
+  font-size: 14px;
+  color: #828282;
+  text-align: center;
+}
+#oc-footer .of-directory>dl{
+	float: left;
+	margin-right: 60px;
+}
+#oc-footer .of-directory a{
+	font-size: 13px;
+}
+#oc-footer .of-directory dd{
+	margin-top: 10px;
+}
+#oc-footer .of-copyright{
+	width:1200px;
+  margin: 72px auto 0 auto;
+  border-top: 1px solid #bdbdbd;
+  padding-top: 30px;
+}
+#oc-footer .of-copyright a{
+	font-size: 12px;
+}
+#oc-footer .of-copyright span{
+	font-size: 12px;
+}
+#oc-footer .of-copyright .of-cp-content .oppo-flag{
+	width: 16px;
+	height: 16px;
+	background: url("../img/flag-1.png") no-repeat;
+	display: inline-block;
+	vertical-align: middle;
+}
+#oc-footer .of-copyright .of-cp-content .oppo-flag:hover{
+	background: url("../img/flag-2.png") no-repeat;
+}
+#oc-footer .of-copyright .of-sns-content .oppo-xl{
+	width: 16px;
+	height: 16px;
+	background: url("../img/xl-1.png") no-repeat;
+	display: inline-block;
+	vertical-align: middle;
+}
+#oc-footer .of-copyright .of-sns-content .oppo-xl:hover{
+	background: url("../img/xl-2.png") no-repeat;
+}
+#oc-footer .of-copyright .of-sns-content .oppo-alipay{
+	width: 16px;
+	height: 16px;
+	background: url("../img/alipay-1.png") no-repeat;
+	display: inline-block;
+	vertical-align: middle;
+}
+#oc-footer .of-copyright .of-sns-content .oppo-alipay:hover{
+	background: url("../img/alipay-2.png") no-repeat;
+}
+#oc-footer .of-copyright .of-sns-content .oppo-global{
+	width: 16px;
+	height: 16px;
+	background: url("../img/global-1.png") no-repeat;
+	display: inline-block;
+	vertical-align: middle;
+}
+#oc-footer .of-copyright .of-sns-content .oppo-global:hover{
+	background: url("../img/global-2.png") no-repeat;
+}
