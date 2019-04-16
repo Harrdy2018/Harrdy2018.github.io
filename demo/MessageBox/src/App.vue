@@ -7,7 +7,7 @@
       <el-table-column prop="lionPrefix" label="lion prefix" width="100" :show-overflow-tooltip="true"></el-table-column>
       <el-table-column prop="createTime" label="创建时间" width="120" :show-overflow-tooltip="true"></el-table-column>
       <el-table-column prop="updateTime" label="更新时间" width="120" :show-overflow-tooltip="true"></el-table-column>
-      <el-table-column label="操作"  width="200">
+      <el-table-column label="操作">
         <template slot-scope="scope">
           <el-button type="text" @click="showEdit(scope)">编辑</el-button>
           <el-button type="text" @click="showDel(scope)">删除</el-button>
