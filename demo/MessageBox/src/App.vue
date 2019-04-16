@@ -1,16 +1,17 @@
 <template>
   <div>
     <el-button size="mini" type="primary" icon="el-icon-plus" @click="showAdd">创建数据源</el-button>
-    <el-table :data="tableData" style="width: 45%;">
+    <el-table :data="tableData" style="width: 50%;">
       <el-table-column prop="name" label="数据源名称" width="130" :show-overflow-tooltip="true"></el-table-column>
       <el-table-column prop="type" label="数据源类型" width="100" :show-overflow-tooltip="true"></el-table-column>
       <el-table-column prop="lionPrefix" label="lion prefix" width="100" :show-overflow-tooltip="true"></el-table-column>
       <el-table-column prop="createTime" label="创建时间" width="120" :show-overflow-tooltip="true"></el-table-column>
       <el-table-column prop="updateTime" label="更新时间" width="120" :show-overflow-tooltip="true"></el-table-column>
-      <el-table-column label="操作"  width="140">
+      <el-table-column label="操作"  width="200">
         <template slot-scope="scope">
           <el-button type="text" @click="showEdit(scope)">编辑</el-button>
           <el-button type="text" @click="showDel(scope)">删除</el-button>
+          <el-button type="text" @click="showExportData(scope)">取弹框数据</el-button>
         </template>
       </el-table-column>
     </el-table>
@@ -18,6 +19,7 @@
 </template>
 <script>
   import Edit from "./components/edit.vue";
+  import Test from "./components/test.vue";
   export default{
     data(){
       return {
@@ -120,6 +122,32 @@
         }).catch((action)=>{
           this.$message({type: 'info',message: '已取消编辑'})
         })
+      },
+      //弹框里面的数据是我们所需要的，我们如何去取呢？
+      showExportData(scope){
+        console.log('你正在执行取弹框里面数据的方法')
+        let vnode=this.$createElement(Test,{
+          key: new Date().getTime()
+        });
+        this.$msgbox({
+          title: '我要取弹框里面的数据',
+          message: vnode,
+          showCancelButton: true,
+          beforeClose: (action,instance,done)=>{
+            if(action !== 'confirm'){
+              done()
+            }else{
+              console.log(vnode);
+              if(vnode.componentInstance.text.trim()){
+                done();
+              }else{
+                this.$message({type: 'warning',message: '请输入必要信息！！！'})
+              }
+            }
+          },
+        }).then(()=>{
+          this.$message({type: 'success',message: `你要的数据是: ${vnode.componentInstance.text.trim()}`})
+        }).catch(()=>{})
       }
     }
   }
