@@ -1,0 +1,2 @@
+console.log("hah");
+add(1,2);
